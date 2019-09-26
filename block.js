@@ -6,7 +6,7 @@ let blockchain = [];
 const genesisBlock = {
     index: blockchain.length,
     timestamp: Date(),
-    data: "fistblock",
+    data: "1stblock",
     dataHash: crypto.createHash('sha256').update("firstblock").digest('hex'),
     previousHash: '',
     headerHash: crypto.createHash('sha256').update("firstblockheader").digest('hex')
@@ -28,9 +28,9 @@ let createBlock = function(data){
 
 blockchain.push(genesisBlock);
 
-createBlock('secondblock');
-createBlock('thirdblock');
-createBlock('forthblock');
-createBlock('fifthblock');
+createBlock('2ndblock');
+createBlock('3rdblock');
+createBlock('4thblock');
+createBlock('5thblock');
 
 console.log(blockchain);
